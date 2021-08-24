@@ -41,7 +41,8 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 { from: 'src/robots.txt', to: 'robots.txt' },
-                { from: 'src/CNAME', to: 'CNAME', toType: 'file' }
+                { from: 'src/sitemap.xml', to: 'sitemap.xml' },
+                { from: 'src/CNAME', to: 'CNAME', toType: 'file' },
             ]
         }),
         new webpack.HotModuleReplacementPlugin(),
