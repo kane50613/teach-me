@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 const webpack = require('webpack');
 
 module.exports = {
@@ -36,6 +37,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: true,
             template: `./src/index.html`,
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: 'src/robots.txt', to: 'robots.txt' },
+                { from: 'src/CNAME', to: 'CNAME', toType: 'file' }
+            ]
         }),
         new webpack.HotModuleReplacementPlugin(),
     ],

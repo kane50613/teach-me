@@ -26,7 +26,6 @@ jobs:
       - name: Commit files
         run: |
           cd ./dist
-          echo "xn--wnux6e.xyz" > CNAME
           git init
           git config --global user.email 50613gary@gmail.com
           git config --global user.name Gary50613
